@@ -16,7 +16,21 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+#from DanchArt.views import saludo_view, despedida_view
+from DanchArt.views import saludo, dar_fecha, calculaEdad, despedida
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('saludo/', saludo),
+    path('despedida/', despedida),
+    path('calculaEdad/<int:agno>', calculaEdad),
+    path('dar_fecha/', dar_fecha)
+
+
+    #path(' /', )
+
+    #paths con sistema general
+    #('saludo/<str:filename>/', saludo_view, name='saludo'),
+    #path('despedida/<str:filename>/', despedida_view, name='despedida'),
 ]
