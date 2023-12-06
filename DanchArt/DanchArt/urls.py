@@ -24,7 +24,7 @@ from DanchArtApp.views import home, shop
 urlpatterns = [
     path('admin/', admin.site.urls),
 
-    path('DanchArtApp/', include('DanchArtApp.urls') ),
+    path('', include('DanchArtApp.urls') ),
     
 
 ]
