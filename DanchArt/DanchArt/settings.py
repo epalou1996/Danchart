@@ -54,7 +54,7 @@ ROOT_URLCONF = 'DanchArt.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ['/root/workspace/github.com/epalou1996/Django/Danchart/DanchArt/DanchArt/plantillas'],
+        'DIRS': ['/root/workspace/github.com/epalou1996/Django/Danchart/DanchArt/DanchArtApp/plantillas'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -116,6 +116,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

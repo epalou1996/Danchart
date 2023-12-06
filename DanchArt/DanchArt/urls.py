@@ -15,20 +15,17 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-#from DanchArt.views import saludo_view, despedida_view
-from DanchArt.views import cuadros
+from django.conf import settings
+from django.conf.urls.static import static
+from django.urls import include, path
+from DanchArtApp.views import home, shop
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('cuadros/', cuadros ),
 
-    #path('<str:check>', check ) Hay que ver como lograr generar las views desde una sola funcion
+    path('DanchArtApp/', include('DanchArtApp.urls') ),
+    
 
-    #path(' /', ),
-
-    #paths con sistema general
-    #('saludo/<str:filename>/', saludo_view, name='saludo'),
-    #path('despedida/<str:filename>/', despedida_view, name='despedida'),
 ]
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
