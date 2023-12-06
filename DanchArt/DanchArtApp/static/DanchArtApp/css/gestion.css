@@ -1,5 +1,12 @@
+@font-face {
+  font-family: 'Typography';
+  src: url('Typography.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
-  font-family: 'Lora';
+  font-family: 'Typography';
   background: linear-gradient(rgba(47, 23, 15, 0.65), rgba(47, 23, 15, 0.65)), url("{% static 'DanchArtApp/img/home.jpg' %}");
   background-attachment: fixed;
   background-position: center;
@@ -12,7 +19,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Raleway';
+  font-family: 'Typography';
 }
 
 p {
@@ -229,7 +236,7 @@ p {
 }
 
 .footer {
-   background-color: rgba(24, 64, 8, 0.8);
+   background-color: aquamarine;
 }
 
 

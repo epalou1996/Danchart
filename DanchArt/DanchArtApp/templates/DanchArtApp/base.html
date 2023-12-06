@@ -3,20 +3,29 @@
 
     <title>
     {% block title %}{% endblock %}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% load static %}
     
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     
+    <!-- Bootstrap -->
+    <link href="{% static 'DanchArtApp//vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  
+     <!-- Fonts -->
+    
+     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap" rel="stylesheet"> 
+     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+     
+  
+    <!-- Styles -->
+    <link href="{% static 'DanchArtApp/css/gestion.css' %}" rel="stylesheet">
 
     </title>
 
 </head>
 {% load static %}
-<body style="background-image: url({% static 'DanchArtApp/img/home.jpg' %});">
+<body style="background-image: url({% static 'DanchArtApp/img/backg_main.jpg' %});">
     <h1 style="background-color:bisque; color: rgb(76, 117, 104) ; text-align: center;margin-top: 0%;">Danchart</h1>
     {% include 'superior/barra.html' %}
-    <h2 style="background-color: rgb(196, 181, 181); color: rgb(30, 233, 165) ;text-align: right;height: 4vh;">Aqui va un subtitulo cool, algo asi como un slogan, Pueden ir sobre esta barra a la izq los links de redes sociales y eso</h2>
+    <h2 style="background-color: rgb(196, 181, 181); color: rgb(30, 233, 165) ;text-align: right;height: 4vh;">Style with love!</h2>
     
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
@@ -50,7 +59,10 @@
     </div>
     
     {% include 'inferior/footer.html' %}   
-    
+    <!-- Bootstrap -->
+    <script src="{% static 'DanchArtApp/vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'DanchArtApp/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
 </body>
     
 </html>
