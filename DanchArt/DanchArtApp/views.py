@@ -11,5 +11,5 @@ def home(request):
 
 def shop(request):
     fecha_actual = datetime.datetime.now()
-    return render(request, 'DanchArtApp/home.html')
+    return render(request, 'DanchArtApp/shop.html')
 

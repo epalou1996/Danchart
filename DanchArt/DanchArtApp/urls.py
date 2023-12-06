@@ -7,8 +7,8 @@ from DanchArtApp import views
 
 urlpatterns = [
 
-    path('', views.home, name='Home' ),
-    path('shop/', views.shop , name='Shop'),
+    path('', views.home, name='home' ),
+    path('shop/', views.shop , name='shop'),
     
 
 ]
