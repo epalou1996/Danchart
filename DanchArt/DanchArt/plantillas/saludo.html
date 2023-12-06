@@ -1,12 +1,19 @@
 <html>
+
 <body>
+
+    {% include 'superior/barra.html' %}
+
     <h1>
         Esta es la pagina de Daniella por ahora, Estamos usando un template para recuperar este documento!
     </h1>
-
-    <P>
-        El nombre del programador que hizo esto es : {{persona.nombre_completo}}
-    </P>
+    
+    
+    {% if persona.nombre_completo == 'Eduardo Palou' %}
+        <P>El nombre del programador que hizo esto es: {{persona.nombre_completo}}</P>
+    {% else %}
+        <P>Edu no hizo esto</P>
+    {% endif %}
     <P>
         Te recuerdo que cerraremos la pagina a las 10pm hora peninsular, y son las {{hora_actual.0}}:{{hora_actual.1}} del dia 
         {{fecha_actual.day}} de {{fecha_actual.month}} del {{fecha_actual.year}}
@@ -16,11 +23,16 @@
     </P>
     <P>
         <ul>
+        {% if tema %}
+
         {% for tema in lista %}
 
            <li> {{tema}}</li>
 
-        {% endfor %}    
+        {% endfor %}
+        {% else %}
+        <p>No hay elementos que mostrar</p> 
+        {% endif %}
         </ul>
     </P>
 

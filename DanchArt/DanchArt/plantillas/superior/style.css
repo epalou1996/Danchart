@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex: 1;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.element {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #333;
+}
+
+.central {
+    flex: 2; /* Esto hará que ocupe el doble de espacio que los otros elementos */
+}

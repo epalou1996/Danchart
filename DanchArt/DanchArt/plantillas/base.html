@@ -1,0 +1,56 @@
+<html>
+<head>
+
+    <title>
+    {% block title %}{% endblock %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+
+    </title>
+
+</head>
+
+<body style="background-color:rgba(255, 162, 224, 0.76);margin: 0;padding: 0;min-height: 150vh;display: flex;flex-direction: column;">
+    <h1 style="background-color:bisque; color: rgb(76, 117, 104) ; text-align: center;margin-top: 0%;">Danchart</h1>
+    {% include 'superior/barra.html' %}
+    <h2 style="background-color: rgb(48, 33, 33); color: rgb(30, 233, 165) ;text-align: right;height: 4vh;">Aqui va un subtitulo cool, algo asi como un slogan, Pueden ir sobre esta barra a la izq los links de redes sociales y eso</h2>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <div style=" flex: 1; height: 85vh;"> 
+        <div style="display: flex; width: 100vw;height: 100%;">   
+            <div style=" width: 10vw;">
+                Aqui van los acordeones
+                <p>Los acordeones serian esos desplegables que salen, con todas las mismas opciones de arriba pero supongo que un poco mas cool. nunca he entendido porque hay 7 accesos distintos
+                    a lo mismo pero bueno xD.
+                </p>
+            </div>
+            
+            
+            <div style=" width: 70vw; background-color: bisque;">
+            <p>Aqui vendrian las distitnas paginas, todo lo demas tendria a mantenerse ahi igual: junto con un breadcrum si te apetece que es eso que dice por ejemplo: shop>cuadros>mascotas, 
+                en la cual podrias cliquear shop y cuadros para regresar. Donde esta esta frase podria aparecer el titulo y eso, y ya los distintos cards para la shop, o el texto para la pagina
+                The artist. Tambien he pensado en una galeria en la cual poner cosas pasadas, con su name abajo para que la gente pueda ver a lo ig tus cosas.</p>        
+                {% block content %}
+                
+                
+                {% endblock %}
+
+            </div>
+
+            
+            <div style=" width: 20vw;">
+                Aqui va una imagen toda chingona
+            </div>
+        </div> 
+    
+    </div>
+    
+    {% include 'inferior/footer.html' %}   
+    
+</body>
+    
+</html>

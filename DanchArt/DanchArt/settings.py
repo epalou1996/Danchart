@@ -54,7 +54,7 @@ ROOT_URLCONF = 'DanchArt.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['/root/workspace/github.com/epalou1996/Django/Danchart/DanchArt/DanchArt/plantillas'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

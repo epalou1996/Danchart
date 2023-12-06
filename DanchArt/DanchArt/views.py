@@ -1,5 +1,7 @@
 from django.http import HttpResponse 
 from django.template import Template, Context 
+from django.template import loader
+from django.shortcuts import render
 import datetime  
 
 class Persona(object):
@@ -17,40 +19,12 @@ def saludo(request):
     minuto_actual = datetime.datetime.now().minute
     fecha_actual = datetime.datetime.now()
 
+    ctx_saludo = {'persona': programador, 'hora_actual': (hora_actual , minuto_actual), 'fecha_actual': fecha_actual, 'lista': ["Arte","Tiktok","Viajes"]}
+    return render(request, 'saludo.html', ctx_saludo)
 
-    doc_externo = open('/root/workspace/github.com/epalou1996/Django/Danchart/DanchArt/DanchArt/plantillas/saludo.html')
-    plt_saludo = Template(doc_externo.read())
-    doc_externo.close()
-    ctx_saludo = Context({'persona': programador, 'hora_actual': (hora_actual , minuto_actual), 'fecha_actual': fecha_actual, 'lista': ["Arte","Tiktok","Viajes"]})
-    documento = plt_saludo.render(ctx_saludo)
-
-
-    return HttpResponse(documento)
-
-def despedida(request):
-
-    doc_externo = open('/root/workspace/github.com/epalou1996/Django/Danchart/DanchArt/DanchArt/plantillas/despedida.html')
-    plt_saludo = Template(doc_externo.read())
-    doc_externo.close()
-    ctx_saludo = Context()
-    documento = plt_saludo.render(ctx_saludo)
-
-
-    return HttpResponse(documento)
-
-def dar_fecha(request):
+def cuadros(request):
     fecha_actual = datetime.datetime.now()
-
-    documento = '''<html>
-    <body>
-    <h2>
-    La hora actual es: %s
-    </h2>
-    </body>
-    </html> ''' % fecha_actual
-
-    return HttpResponse(documento)
-
+    return render(request, 'cuadros.html', {'dame_fecha': fecha_actual})
 
 def calculaEdad (request, agno):
 
@@ -67,47 +41,4 @@ def calculaEdad (request, agno):
     </html>  ''' % (agno, edadFutura)
    
     return HttpResponse(documento)
-
-'''
-
-def view_creator(name_template):
-    def decorator(view_func):
-        def inner_func(request, filename):
-            path = '/root/workspace/github.com/epalou1996/Django/Danchart/DanchArt/DanchArt/plantillas/'
-            doc_externo = open(path + name_template)
-            plantilla = Template(doc_externo.read())
-            doc_externo.close()
-            contexto = Context()
-            documento = plantilla.render(contexto)
-
-            # Utiliza la función original para obtener la respuesta y luego envuélvela en HttpResponse
-            response = view_func(request, filename)
-            if not isinstance(response, HttpResponse):
-                # Puedes personalizar cómo manejar el resultado de la función original si es necesario
-                response = HttpResponse(response)
-
-            return response
-
-        return inner_func
-
-    return decorator
-
-@view_creator(name_template="saludo.html")
-def saludo_view(request, filename):
-    # La lógica de tu vista original aquí
-    return HttpResponse(f"Hola, mundo")
-
-@view_creator(name_template="despedida.html")
-def despedida_view(request, filename):
-    # La lógica de tu vista original aquí
-    return HttpResponse(f"Adios, mundo")       
-
-'''        
-        
-
-
-
-
-
-
 

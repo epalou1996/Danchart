@@ -17,18 +17,18 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 #from DanchArt.views import saludo_view, despedida_view
-from DanchArt.views import saludo, dar_fecha, calculaEdad, despedida
+from DanchArt.views import saludo, calculaEdad, cuadros
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('saludo/', saludo),
-    path('despedida/', despedida),
     path('calculaEdad/<int:agno>', calculaEdad),
-    path('dar_fecha/', dar_fecha)
+    path('cuadros/', cuadros ),
 
+    #path('<str:check>', check ) Hay que ver como lograr generar las views desde una sola funcion
 
-    #path(' /', )
+    #path(' /', ),
 
     #paths con sistema general
     #('saludo/<str:filename>/', saludo_view, name='saludo'),
