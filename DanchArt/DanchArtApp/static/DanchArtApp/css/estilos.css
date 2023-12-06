@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Typodanch';
+    src: url('..fonts/Typography/Typography Ties Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 13;
+}
