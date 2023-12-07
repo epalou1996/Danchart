@@ -5,7 +5,14 @@
     font-style: normal;
 }
 
-h1{
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 13;
+.mifuente{
+    font-family: 'Typodanch';
+    font-size: 20;
+}
+
+.subtitulo{
+    border-bottom-right-radius: 2vh 1vw;
+    border-bottom-left-radius: 2vh 1vw;
+
+
 }
