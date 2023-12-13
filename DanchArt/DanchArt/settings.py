@@ -62,6 +62,7 @@ TEMPLATES = [
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
+                'django.template.context_processors.media',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
@@ -77,8 +78,12 @@ WSGI_APPLICATION = 'DanchArt.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'danchart',
+        'USER': 'postgres',
+        'PASSWORD' : 'amigo',
+        'HOST' :'127.0.0.1',
+        'PORT': '5432',
     }
 }
 
@@ -119,6 +124,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'DanchArtApp/static')
+
+MEDIA_ROOT =  os.path.join(BASE_DIR, 'DanchArtApp/media') 
+MEDIA_URL = 'media/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

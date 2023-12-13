@@ -1,18 +1,32 @@
 @font-face {
-    font-family: 'Typodanch';
-    src: url('..fonts/Typography/Typography Ties Regular.ttf') format('truetype');
+    font-family: 'danch';
+    src: local(static) url( static 'DanchArtApp/fonts/Typography/TypographyTiesRegular.ttf' ) format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 .mifuente{
-    font-family: 'Typodanch';
-    font-size: 20;
+    font-family: 'danch', sans-serif;
+    
 }
 
 .subtitulo{
     border-bottom-right-radius: 2vh 1vw;
     border-bottom-left-radius: 2vh 1vw;
-
-
+    font-size: 30;
+    
 }
+
+.contenedor-padre {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contenedor {
+    width: 20rem; /* Ancho del 33.33% con margen entre elementos */
+    margin: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+

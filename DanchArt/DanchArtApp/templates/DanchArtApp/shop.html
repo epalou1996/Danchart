@@ -2,17 +2,26 @@
 {% block title %} Cuadros de navidad {% endblock %}
 {% block content %}
 
-<p>Aqui van cuadros, los cuales son clickeables y eso.</p>
 
-
-    <div class="card" style="width: 25rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
-  </div>
+<p>Aqui van cuadros, los cuales son clickeables y eso actualmente hay{{lista}}.</p>
+{% for grupo in lista %}
+  <div style="width: 100%; padding-left: 5rem; padding-right: 5rem; display: flex;"> 
   
+    {% for tipo, cat in grupo %}
+
+      <div class="card" style="width: 30%; margin-right: 2%;">
+        <img src="{{tipo.imagen.url}}" class="card-img-top" alt="mecagoendios">
+        <div class="card-body">
+          <h5 class="card-title">{{cat}}</h5>
+          <p class="card-text">Solicita Aqui tu cuadro con tu {{cat}}</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+
+    {% endfor %}
+ 
+  </div>
+  {% endfor %}
 
 {% endblock %}
+

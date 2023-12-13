@@ -24,7 +24,7 @@
 </head>
 {% load static %}
 <body style="background-image: url({% static 'DanchArtApp/img/backg_main.jpg' %});">
-    <h1 style="background-color:bisque; color: rgb(76, 117, 104) ; text-align: center;margin-top: 0%;;font-family: 'Typodanch';">Danchart</h1>
+    <h1 class='mifuente' style="background-color:bisque; color: rgb(76, 117, 104) ; text-align: center;margin-top: 0%;">Danchart</h1>
     {% include 'superior/barra.html' %}
     <h2 class="subtitulo mifuente" style=" rgb(30, 233, 165) ;text-align: right;height: 4vh; background-color: rgb(36, 124, 95); opacity: 0.7;">Style with love!</h2>
     
@@ -33,14 +33,13 @@
     <div style=" flex: 1; height: 85vh; background-color: transparent;"> 
         <div style="display: flex; width: 100vw;height: 100%;">   
             <div style=" width: 10vw;">
-                Aqui van los acordeones
-                <p>Los acordeones serian esos desplegables que salen, con todas las mismas opciones de arriba pero supongo que un poco mas cool. nunca he entendido porque hay 7 accesos distintos
-                    a lo mismo pero bueno xD.
-                </p>
+                nuc
             </div>
             
             
             <div style=" width: 70vw; background-color: bisque; border-radius: 2vh 2vw;">
+
+                
                   
                 {% block content %}
                 
