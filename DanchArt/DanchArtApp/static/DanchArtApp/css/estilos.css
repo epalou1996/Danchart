@@ -1,18 +1,18 @@
 @font-face {
-    font-family: 'danch';
-    src: local(static) url( static 'DanchArtApp/fonts/Typography/TypographyTiesRegular.ttf' ) format('truetype');
+    font-family: 'Caveat';
+    src: local(static) url( static 'DanchArtApp/fonts/Caveat.ttf' ) format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 .mifuente{
-    font-family: 'danch', sans-serif;
+    font-family: 'Caveat';
+    color: black;
     
 }
 
 .subtitulo{
-    border-bottom-right-radius: 2vh 1vw;
-    border-bottom-left-radius: 2vh 1vw;
+    border-radius: 2vh 1vw;
     font-size: 30;
     
 }
